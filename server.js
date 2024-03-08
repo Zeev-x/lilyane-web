@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 
-const port = fs.readFileSync('./config/port.conf','utf8').trim();
+const port = process.env.PORT || fs.readFileSync('./config/port.conf','utf8').trim();
 const server = express();
 
 server.use(express.static(path.resolve(__dirname,'public')));

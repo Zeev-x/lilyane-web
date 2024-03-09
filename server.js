@@ -13,7 +13,7 @@ server.listen(port,() => {
 //------------------------------------------//
 
 server.get('/home',(req,res) => {
-    var text = fs.readFileSync('./README.md','utf8');
+    var text = fs.readFileSync('./view/home.html','utf8');
     res.send(text);
 });
 

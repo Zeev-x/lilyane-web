@@ -17,6 +17,21 @@ server.get('/home',(req,res) => {
     res.send(text);
 });
 
+server.get('/about',(req,res) => {
+    var text = fs.readFileSync('./view/about.html','utf8');
+    res.send(text);
+});
+
+server.get('/service',(req,res) => {
+    var text = fs.readFileSync('./view/service.html','utf8');
+    res.send(text);
+});
+
+server.get('/contact',(req,res) => {
+    var text = fs.readFileSync('./view/contact.html','utf8');
+    res.send(text);
+});
+
 //------------------------------------------//
 server.use((req,res) => {
     var path = req.path;
